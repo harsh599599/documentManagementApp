@@ -32,6 +32,18 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/document-manage-app.git
+   git clone https://github.com/harsh599599/documentManagementApp.git
    cd document-manage-app
    ```
+
+2. install dependancy:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   npm run dev
+
+4. Open the application in your browser:
+   http://localhost:3000
