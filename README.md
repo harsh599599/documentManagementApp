@@ -43,7 +43,10 @@
    ```
 
 3. Start the development server:
+
+   ```bash
    npm run dev
+   ```
 
 4. Open the application in your browser:
    http://localhost:3000
