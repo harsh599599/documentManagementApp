@@ -11,7 +11,6 @@ const DocumentList = ({
 
   const handlePreview = (document) => {
     setPreviewDocument(document);
-    // Additional logic to show preview modal or preview area
   };
 
   const handleClosePreview = () => {
@@ -19,16 +18,13 @@ const DocumentList = ({
   };
   return (
     <div>
-      {/* Search Bar */}
-      <div style={{ marginBottom: "20px" }}>
+      <div className="mb-5">
         <input
           type="text"
           placeholder="Search by name"
           onChange={(e) => onSearch(e.target.value)}
         />
       </div>
-
-      {/* Document List */}
       {documents?.map((document) => (
         <div
           key={document.id}
@@ -46,7 +42,6 @@ const DocumentList = ({
         </div>
       ))}
 
-      {/* Pagination */}
       <div
         style={{ marginTop: "20px" }}
         className="flex justify-between items-center mt-4"
@@ -93,7 +88,6 @@ const DocumentList = ({
               <h2 className="text-lg">{previewDocument.size}</h2>
               <h2 className="text-lg">{previewDocument.uploadDate}</h2>
             </div>
-            {/* Add preview content here, e.g., an iframe for PDFs, image tag for images, etc. */}
           </div>
         </div>
       )}

@@ -1,4 +1,3 @@
-// pages/index.js
 import "../styles/tailwind.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
@@ -20,8 +19,6 @@ const HomePage = ({ initialDocuments }) => {
       const response = await axios.get(
         `/api/documents?page=${currentPage}&searchTerm=${searchTerm}&perPage=5`
       );
-
-      // Update documents state based on current page
       setDocuments(response.data.documents);
       setTotalPages(response.data.totalPages);
     } catch (error) {
@@ -31,7 +28,7 @@ const HomePage = ({ initialDocuments }) => {
 
   const handleSearch = (term) => {
     setSearchTerm(term);
-    setCurrentPage(1); // Reset to first page when searching
+    setCurrentPage(1);
   };
 
   const handlePagination = (page) => {
@@ -66,7 +63,6 @@ const HomePage = ({ initialDocuments }) => {
 };
 
 export async function getServerSideProps() {
-  // Fetch initial documents data for server-side rendering
   try {
     const response = await axios.get(`/api/documents?page=1&searchTerm=`);
     const initialDocuments = response.data.documents;
